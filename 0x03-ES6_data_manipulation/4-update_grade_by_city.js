@@ -1,13 +1,10 @@
-export default function updateStudentGradeByCity(students, city, grades) {
-  if (!Array.isArray(students)
-	  || !Array.isArray(grades)
-	  || !city instanceof String) {
-    return [];
-  }
-  return students.filter((student) => student.location === city).map((student) => {
-    let marks = grades.find((grade) => grade.studentId === student.id);
-    (marks) ? marks = marks : marks = 'N/A';
-    student.grade = marks;
-    return student;
+export default function updateStudentGradeByCity(studentsList, city, newGrades) {
+  const studentByCity = studentsList.filter((student) => student.location === city);
+  return studentByCity.map((student) => {
+    const grade = newGrades.find((studentGrade) => studentGrade.studentId === student.id);
+    if (grade) {
+      return { ...student, grade: grade.grade };
+    }
+    return { ...student, grade: 'N/A' };
   });
 }
