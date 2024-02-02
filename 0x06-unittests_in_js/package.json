@@ -1,5 +1,6 @@
 {
   "name": "0x06-unittests_in_js",
+  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +11,10 @@
   "author": "Alexx",
   "license": "ISC",
   "dependencies": {
-    "chai": "^4.2.0"
+    "mocha": "^10.2.0"
   },
   "devDependencies": {
-    "mocha": "^10.2.0"
+    "chai": "^4.3.7",
+    "sinon": "^17.0.1"
   }
 }
