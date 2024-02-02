@@ -1,11 +1,10 @@
 {
   "name": "0x06-unittests_in_js",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha '*.test.js'"
+    "test": "mocha --require '*.test.js'"
   },
   "keywords": [],
   "author": "Alexx",
